@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7415924250393238920}
   - component: {fileID: 2765771169089379754}
   - component: {fileID: 3636782452989371817}
-  - component: {fileID: 8986617641036591195}
+  - component: {fileID: 8639658067789233086}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -28,14 +28,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7267153599593187858}
-  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.5532207, y: 2.353812, z: 0}
   m_LocalScale: {x: 1.5, y: 2, z: 0}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2131634877504762786}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6343208604019448306
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -149,8 +150,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 347209e5ce9390341be820da3c8991b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
---- !u!95 &8986617641036591195
+  EnemyBulleteSpawnPlace: {fileID: 2131634877504762786}
+  EnemyBullet: {fileID: 8466656301262012711, guid: db33c93eab1e85845b72d076dc5a96e6, type: 3}
+  bulletSpawnRate: 3
+--- !u!95 &8639658067789233086
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -171,3 +174,34 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &9021860423930091414
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2131634877504762786}
+  m_Layer: 0
+  m_Name: EnemyBulletSpawnerPlace
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2131634877504762786
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9021860423930091414}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.525, z: 0}
+  m_LocalScale: {x: 0.6666667, y: 0.5, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7501580070280408894}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

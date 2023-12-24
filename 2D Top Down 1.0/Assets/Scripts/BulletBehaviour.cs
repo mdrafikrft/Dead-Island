@@ -7,6 +7,9 @@ public class BulletBehaviour : MonoBehaviour
     [SerializeField] float lifeOfBullet = 5.0f;
     [SerializeField] float speedOfBullet = 100.0f;
 
+    public int damage;
+    public GameObject deathEffect;
+    
     Rigidbody2D bulletRb;
 
     private void Awake()
@@ -17,13 +20,14 @@ public class BulletBehaviour : MonoBehaviour
 
     private void FixedUpdate()
     {
-        bulletRb.velocity = new Vector3(0, speedOfBullet, 0);
+        bulletRb.velocity = transform.up * speedOfBullet;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
+            Instantiate(deathEffect, collision.transform.position, Quaternion.identity);
             Destroy(gameObject);
             Destroy(collision.gameObject);
         }
