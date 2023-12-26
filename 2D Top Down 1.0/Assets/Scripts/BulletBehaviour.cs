@@ -8,8 +8,7 @@ public class BulletBehaviour : MonoBehaviour
     [SerializeField] float speedOfBullet = 100.0f;
 
     public int damage;
-    public GameObject deathEffect;
-    
+        
     Rigidbody2D bulletRb;
 
     private void Awake()
@@ -27,7 +26,6 @@ public class BulletBehaviour : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            Instantiate(deathEffect, collision.transform.position, Quaternion.identity);
             Destroy(gameObject);
             Destroy(collision.gameObject);
         }

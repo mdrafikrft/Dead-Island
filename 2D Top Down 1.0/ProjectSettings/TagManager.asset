@@ -43,3 +43,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Enemies
+    uniqueID: 2173452851
+    locked: 0
+  - name: Player
+    uniqueID: 2839975871
+    locked: 0
+  - name: Gun
+    uniqueID: 370038463
+    locked: 0
+  - name: GunCrossSign
+    uniqueID: 946162055
+    locked: 0
+  - name: Bullets
+    uniqueID: 2865124701
+    locked: 0

@@ -6,24 +6,19 @@ public class Enemy : MonoBehaviour
 {
     //Vector3 directionToPlayer;
     Rigidbody2D enemyRb;
-    int damage;
-
+ 
     private Transform player;
-    public Transform EnemyBulleteSpawnPlace;
-    public float bulletSpawnRate;
-    public int health;
-    
+               
     
     private void Awake()
     {
         enemyRb = GetComponent<Rigidbody2D>();
-        damage = FindObjectOfType<BulletBehaviour>().damage;
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        player = FindObjectOfType<PlayerMovement>().transform;
     }
 
     private void Update()
     {
-        Debug.DrawRay(transform.position, GetDirection(), Color.white);
+        Debug.DrawRay(transform.position, GetDirection(), Color.green);
     }
 
     public Vector3 GetDirection()
@@ -45,6 +40,7 @@ public class Enemy : MonoBehaviour
         Quaternion q = Quaternion.Euler(new Vector3(0, 0, angle));
         transform.localRotation = Quaternion.Slerp(transform.localRotation, q, 0.5f);
     }
+
     private void FixedUpdate()
     {
         RotateTowardsPlayer();

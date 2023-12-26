@@ -57,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
             if(inputValue != Vector2.zero)
             {
                 transform.up = inputValue;
-
+                
                 Vector2 direction = transform.up - transform.position;
                 float angleQ = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90.0f; 
                 float angle = Mathf.SmoothDampAngle(transform.eulerAngles.z, angleQ, ref r, 1.0f);
