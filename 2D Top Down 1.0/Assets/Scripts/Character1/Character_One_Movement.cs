@@ -9,6 +9,7 @@ public class Character_One_Movement : MonoBehaviour
     [SerializeField] Transform GunFireLightSpot;
     [SerializeField] GameObject GunfireLight;
     [SerializeField] GameObject BulletPrefab;
+    //[SerializeField] Animator animator;
  
     CharacterInput characterInput;
     Rigidbody2D characterRb;
@@ -21,6 +22,8 @@ public class Character_One_Movement : MonoBehaviour
 
         characterInput.Character_First.Movement.performed += Movement_performed;
         characterInput.Character_First.Fire.performed += Fire_performed;
+
+        //animator.SetFloat("Idle", 0);
     }
 
     public void Fire_performed(InputAction.CallbackContext context)
@@ -34,6 +37,8 @@ public class Character_One_Movement : MonoBehaviour
 
     public void Movement_performed(InputAction.CallbackContext context)
     {
+       
+
         if (context.performed)
         {
             Vector2 InputValue = context.ReadValue<Vector2>();
@@ -55,6 +60,7 @@ public class Character_One_Movement : MonoBehaviour
 
         else if (context.canceled)
         {
+             
             characterRb.velocity = new Vector3(0f, 0f, 0f);
         }
         
@@ -68,4 +74,12 @@ public class Character_One_Movement : MonoBehaviour
 
         facingRight = !facingRight;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Water"))
+        {
+            Destroy(gameObject);
+        }
+    }    
 }

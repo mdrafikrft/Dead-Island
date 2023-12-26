@@ -4,16 +4,17 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Enemy
   - Bullet
+  - EnemyTag
+  - Water
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Bullet
   - Water
   - UI
-  - 
+  - Enemy
   - 
   - 
   - 

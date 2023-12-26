@@ -23,9 +23,11 @@ public class BulletBehavior : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Instantiate(deathEffect, collision.gameObject.transform.position, Quaternion.identity);
-        Destroy(collision.gameObject);
-        
+        //Instantiate(deathEffect, collision.gameObject.transform.position, Quaternion.identity);
+        if (collision.gameObject.CompareTag("EnemyTag"))
+        {
+            Destroy(collision.gameObject);
+        }
         //Destroy(gameObject, 2);
     }
 }

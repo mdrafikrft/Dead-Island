@@ -102,7 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 100
   life: 5
-  deathEffect: {fileID: 610184939351896944, guid: c451fedf6ef577d4ab420bf192f3852e, type: 3}
+  deathEffect: {fileID: 0}
 --- !u!50 &4030316623046341273
 Rigidbody2D:
   serializedVersion: 4
@@ -179,7 +179,7 @@ GameObject:
   m_Component:
   - component: {fileID: 99741346129409130}
   - component: {fileID: 1604778758132779220}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BulletTail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
