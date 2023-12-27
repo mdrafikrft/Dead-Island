@@ -9,16 +9,19 @@ public class Character_One_Movement : MonoBehaviour
     [SerializeField] Transform GunFireLightSpot;
     [SerializeField] GameObject GunfireLight;
     [SerializeField] GameObject BulletPrefab;
-    //[SerializeField] Animator animator;
+    [SerializeField] Animator animator;
  
     CharacterInput characterInput;
     Rigidbody2D characterRb;
     bool facingRight = true;
 
+    GunScript gunScript;
+
     private void Awake()
     {
         characterInput = new CharacterInput();
         characterRb = GetComponent<Rigidbody2D>();
+        gunScript = FindObjectOfType<GunScript>();
 
         characterInput.Character_First.Movement.performed += Movement_performed;
         characterInput.Character_First.Fire.performed += Fire_performed;
@@ -79,7 +82,11 @@ public class Character_One_Movement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Water"))
         {
-            Destroy(gameObject);
+            animator.SetBool("Dead", true);
+            gunScript.isDead(true);
+            Destroy(gameObject, 2);
         }
-    }    
+    }
+
+    
 }

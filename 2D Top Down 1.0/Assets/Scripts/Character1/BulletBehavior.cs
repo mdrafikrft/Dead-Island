@@ -6,7 +6,7 @@ public class BulletBehavior : MonoBehaviour
 {
     [SerializeField] float speed;
     [SerializeField] float life;
-    [SerializeField] GameObject deathEffect;
+    
 
     Rigidbody2D rb;
 
@@ -14,8 +14,11 @@ public class BulletBehavior : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         Destroy(gameObject, life);
+
+                
     }
 
+    
     private void FixedUpdate()
     {
         rb.velocity = transform.up * speed;
@@ -27,7 +30,8 @@ public class BulletBehavior : MonoBehaviour
         if (collision.gameObject.CompareTag("EnemyTag"))
         {
             Destroy(collision.gameObject);
+            Destroy(gameObject);
         }
-        //Destroy(gameObject, 2);
+        
     }
 }
