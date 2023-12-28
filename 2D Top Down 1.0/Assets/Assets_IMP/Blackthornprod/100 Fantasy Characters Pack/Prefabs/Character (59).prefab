@@ -70,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2121514445
+  m_SortingLayer: 2
   m_SortingOrder: 2
   m_Sprite: {fileID: -1819976869, guid: 0c1e734fa85636743af3bc22c6d99ba8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -154,8 +154,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2121514445
+  m_SortingLayer: 2
   m_SortingOrder: -1
   m_Sprite: {fileID: -1819976869, guid: 0c1e734fa85636743af3bc22c6d99ba8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -238,8 +238,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2121514445
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 667429749, guid: 0c1e734fa85636743af3bc22c6d99ba8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -263,9 +263,9 @@ GameObject:
   - component: {fileID: 2049180613814870123}
   - component: {fileID: 375971353450230639}
   - component: {fileID: 6352475974131662518}
-  - component: {fileID: 2881335995784325318}
   - component: {fileID: -6561377292747789826}
-  - component: {fileID: 5711864357219962209}
+  - component: {fileID: 585020831}
+  - component: {fileID: 7922881228692910202}
   m_Layer: 0
   m_Name: Character (59)
   m_TagString: EnemyTag
@@ -333,21 +333,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &2881335995784325318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2049180613814870122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f97631114d8e584eb405721a418e619, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  firingSpot: {fileID: 0}
-  startTimeBtwShots: 2
 --- !u!212 &-6561377292747789826
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -400,8 +385,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!70 &5711864357219962209
-CapsuleCollider2D:
+--- !u!58 &585020831
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -413,9 +398,25 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.5, y: 1}
-  m_Direction: 0
+  m_Offset: {x: 0.3100001, y: 0.039967574}
+  serializedVersion: 2
+  m_Radius: 0.37003252
+--- !u!114 &7922881228692910202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2049180613814870122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f97631114d8e584eb405721a418e619, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  firingSpot: {fileID: 0}
+  startTimeBtwShots: 2
+  deathParticle: {fileID: 170681384780395920, guid: da30fd6270cb98e4dbb4a502f67fed3f, type: 3}
 --- !u!1 &2049180614649257463
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,8 +488,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2121514445
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 1328545027, guid: 0c1e734fa85636743af3bc22c6d99ba8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

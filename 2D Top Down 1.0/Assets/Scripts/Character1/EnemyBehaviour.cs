@@ -11,6 +11,7 @@ public class EnemyBehaviour : MonoBehaviour
     [SerializeField] Transform firingSpot;
     float timeBtwShots;
     [SerializeField] float startTimeBtwShots;
+    [SerializeField] ParticleSystem deathParticle;
 
     Rigidbody2D enemyRb;
     
@@ -63,5 +64,14 @@ public class EnemyBehaviour : MonoBehaviour
         
     }
 
-    
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Bullet"))
+        {
+            Instantiate(deathParticle, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        }
+    }
+
+
 }

@@ -6,7 +6,7 @@ public class BulletBehavior : MonoBehaviour
 {
     [SerializeField] float speed;
     [SerializeField] float life;
-    
+    //[SerializeField] ParticleSystem destroyParticle;
 
     Rigidbody2D rb;
 
@@ -15,7 +15,7 @@ public class BulletBehavior : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         Destroy(gameObject, life);
 
-                
+        //destroyParticle = FindObjectOfType<ParticleSystem>();
     }
 
     
@@ -29,7 +29,9 @@ public class BulletBehavior : MonoBehaviour
         //Instantiate(deathEffect, collision.gameObject.transform.position, Quaternion.identity);
         if (collision.gameObject.CompareTag("EnemyTag"))
         {
-            Destroy(collision.gameObject);
+            /*Instantiate(destroyParticle, collision.gameObject.transform.position, Quaternion.identity);
+            Destroy(collision.gameObject);*/
+            
             Destroy(gameObject);
         }
         

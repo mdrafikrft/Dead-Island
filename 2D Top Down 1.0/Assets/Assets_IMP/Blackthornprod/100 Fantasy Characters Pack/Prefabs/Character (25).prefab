@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 3449157669816223840}
   - component: {fileID: 2451176199020477679}
   - component: {fileID: -7783064510857212441}
-  - component: {fileID: 2834535827285921935}
   - component: {fileID: 7974782560359050767}
   - component: {fileID: 4359389558737017694}
+  - component: {fileID: 1287777581098174640}
   m_Layer: 0
   m_Name: Character (25)
   m_TagString: EnemyTag
@@ -79,21 +79,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &2834535827285921935
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3449157669816223843}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f97631114d8e584eb405721a418e619, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  firingSpot: {fileID: 0}
-  startTimeBtwShots: 2
 --- !u!212 &7974782560359050767
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -162,6 +147,22 @@ CircleCollider2D:
   m_Offset: {x: 0.12345614, y: 0.06}
   serializedVersion: 2
   m_Radius: 0.5172806
+--- !u!114 &1287777581098174640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3449157669816223843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f97631114d8e584eb405721a418e619, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  firingSpot: {fileID: 0}
+  startTimeBtwShots: 2
+  deathParticle: {fileID: 170681384780395920, guid: da655e86c0a76e34f9d60b2405e771f6, type: 3}
 --- !u!1 &3449157669964368575
 GameObject:
   m_ObjectHideFlags: 0

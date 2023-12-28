@@ -111,9 +111,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7953801127645197774}
-  m_LocalRotation: {x: -0, y: -0, z: 0.012633311, w: 0.99992025}
-  m_LocalPosition: {x: -0.02, y: 0.77, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.012633311, w: 0.9999202}
+  m_LocalPosition: {x: -0.020000186, y: 0.76999986, z: -0.0000000018626451}
+  m_LocalScale: {x: 1, y: 1, z: 0.99999994}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7953801127599843580}
@@ -284,7 +284,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7953801127834531909}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.9, y: 2.7, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3.5, y: 3.5, z: 3.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -426,9 +426,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  player: {fileID: 1269258664836108584, guid: a6d1f53257f5ecc4d960f0fdd389b664, type: 3}
   firingSpot: {fileID: 8230515238653389763}
   startTimeBtwShots: 2
+  deathParticle: {fileID: 0}
 --- !u!1 &7953801128653929559
 GameObject:
   m_ObjectHideFlags: 0

@@ -70,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2121514445
+  m_SortingLayer: 2
   m_SortingOrder: 2
   m_Sprite: {fileID: 552860538, guid: 0c1e734fa85636743af3bc22c6d99ba8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -155,8 +155,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2121514445
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 613521430, guid: 0c1e734fa85636743af3bc22c6d99ba8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -180,9 +180,9 @@ GameObject:
   - component: {fileID: 5600347076844282562}
   - component: {fileID: 777033075262386847}
   - component: {fileID: -2193157397097117763}
-  - component: {fileID: 7705846315180536178}
   - component: {fileID: 5060009038839004287}
-  - component: {fileID: 669910485087084258}
+  - component: {fileID: 492268918}
+  - component: {fileID: -6026829358005037932}
   m_Layer: 0
   m_Name: Character (58)
   m_TagString: EnemyTag
@@ -250,21 +250,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &7705846315180536178
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5600347076844282563}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f97631114d8e584eb405721a418e619, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  firingSpot: {fileID: 0}
-  startTimeBtwShots: 2
 --- !u!212 &5060009038839004287
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -317,8 +302,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!70 &669910485087084258
-CapsuleCollider2D:
+--- !u!68 &492268918
+EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -331,8 +316,50 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.5, y: 1}
-  m_Direction: 0
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.22554529, y: 0.9852221}
+  - {x: 0.103952795, y: 0.97825766}
+  - {x: 0.209803, y: 0.6435426}
+  - {x: 0.021964878, y: 0.6289251}
+  - {x: 0.1044385, y: 0.37857187}
+  - {x: 0.071293384, y: 0.024969995}
+  - {x: 0.31729475, y: 0.09580118}
+  - {x: 0.45291245, y: -0.10738999}
+  - {x: 0.38526303, y: -0.35947973}
+  - {x: 0.19718023, y: -0.31979874}
+  - {x: 0.0075543523, y: -0.1940448}
+  - {x: -0.03389205, y: 0.014751196}
+  - {x: 0.009416908, y: 0.21132344}
+  - {x: 0.039217725, y: 0.402881}
+  - {x: -0.053112246, y: 0.57551}
+  - {x: -0.09626326, y: 0.62988776}
+  - {x: -0.15729943, y: 0.53655934}
+  - {x: -0.37553924, y: 0.6471492}
+  - {x: -0.456878, y: 0.70703}
+  - {x: -0.3990745, y: 0.85523105}
+  - {x: -0.30926675, y: 0.946208}
+  - {x: -0.21762526, y: 0.9757486}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
+--- !u!114 &-6026829358005037932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5600347076844282563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f97631114d8e584eb405721a418e619, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  firingSpot: {fileID: 0}
+  startTimeBtwShots: 2
+  deathParticle: {fileID: 170681384780395920, guid: 23ca1acdc6f78ce48a811cf7535cba7d, type: 3}
 --- !u!1 &5600347077174356550
 GameObject:
   m_ObjectHideFlags: 0
@@ -403,8 +430,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2121514445
+  m_SortingLayer: 2
   m_SortingOrder: -1
   m_Sprite: {fileID: 552860538, guid: 0c1e734fa85636743af3bc22c6d99ba8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -487,8 +514,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2121514445
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: 2076316583, guid: 0c1e734fa85636743af3bc22c6d99ba8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
