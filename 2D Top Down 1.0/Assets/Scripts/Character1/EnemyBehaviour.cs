@@ -14,12 +14,19 @@ public class EnemyBehaviour : MonoBehaviour
     [SerializeField] ParticleSystem deathParticle;
 
     Rigidbody2D enemyRb;
-    
+    CameraShake shake;
 
+    private void Start()
+    {
+        shake = GameObject.FindObjectOfType<CameraShake>();
+            
+    }
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         enemyRb = GetComponent<Rigidbody2D>();
+        shake = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraShake>();
+
         timeBtwShots = startTimeBtwShots;
 
     }
@@ -68,6 +75,7 @@ public class EnemyBehaviour : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
+            StartCoroutine(shake.cameraShakeQuantity(1, 1));
             Instantiate(deathParticle, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
