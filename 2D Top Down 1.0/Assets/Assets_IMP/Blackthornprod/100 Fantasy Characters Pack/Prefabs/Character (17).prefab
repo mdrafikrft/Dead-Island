@@ -332,3 +332,4 @@ MonoBehaviour:
   firingSpot: {fileID: 0}
   startTimeBtwShots: 2
   deathParticle: {fileID: 170681384780395920, guid: e5acb9bca5f576a4fb5ed9423ade94f6, type: 3}
+  burstSound: {fileID: 891122867047735356, guid: 348c25aca5b8dde47aae2f59e9fb8eec, type: 3}

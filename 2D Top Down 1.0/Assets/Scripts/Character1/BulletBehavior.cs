@@ -6,12 +6,15 @@ public class BulletBehavior : MonoBehaviour
 {
     [SerializeField] float speed;
     [SerializeField] float life;
+
+    
     //[SerializeField] ParticleSystem destroyParticle;
 
     Rigidbody2D rb;
 
     private void Awake()
     {
+        
         rb = GetComponent<Rigidbody2D>();
         Destroy(gameObject, life);
 
@@ -21,6 +24,7 @@ public class BulletBehavior : MonoBehaviour
     
     private void FixedUpdate()
     {
+        
         rb.velocity = transform.up * speed;
     }
 

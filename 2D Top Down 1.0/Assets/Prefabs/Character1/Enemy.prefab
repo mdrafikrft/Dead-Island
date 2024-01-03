@@ -429,6 +429,7 @@ MonoBehaviour:
   firingSpot: {fileID: 8230515238653389763}
   startTimeBtwShots: 2
   deathParticle: {fileID: 0}
+  shake: {fileID: 0}
 --- !u!1 &7953801128653929559
 GameObject:
   m_ObjectHideFlags: 0
