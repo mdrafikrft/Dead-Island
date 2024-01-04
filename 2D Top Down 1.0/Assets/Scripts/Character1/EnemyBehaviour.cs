@@ -91,6 +91,7 @@ public class EnemyBehaviour : MonoBehaviour
             {
                 showScoreText();
             }
+
             Destroy(gameObject);
         }
     }

@@ -15,6 +15,7 @@ public class Character_One_Movement : MonoBehaviour
     Rigidbody2D characterRb;
     bool facingRight = true;
 
+
     GunScript gunScript;
 
     private void Awake()
@@ -86,6 +87,12 @@ public class Character_One_Movement : MonoBehaviour
             gunScript.isDead(true);
             Destroy(gameObject, 2);
         }
+    }
+
+    public float playerXPosition()
+    {
+        float x = transform.position.x;
+        return x;
     }
 
     
