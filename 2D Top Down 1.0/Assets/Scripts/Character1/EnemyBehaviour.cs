@@ -12,17 +12,21 @@ public class EnemyBehaviour : MonoBehaviour
     float timeBtwShots;
     [SerializeField] float startTimeBtwShots;
     [SerializeField] ParticleSystem deathParticle;
+    [SerializeField] GameObject scorePlusTextPrefab;
+    
     //[SerializeField] AudioSource burstSound;
 
     //ShakeManager shake;
     Rigidbody2D enemyRb;
+    private Score score;
     
 
     private void Start()
     {
         //shake = GameObject.FindGameObjectWithTag("ShakeManager").GetComponent<ShakeManager>();
-            
+        score = GameObject.FindGameObjectWithTag("score").GetComponent<Score>(); 
     }
+
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -81,8 +85,19 @@ public class EnemyBehaviour : MonoBehaviour
             ShakeManager.Instance.CamShake(20.0f, 0.1f);
             //burstSound.Play();
             Instantiate(deathParticle, transform.position, Quaternion.identity);
+            score.IncreaseScore(1);
+
+            if(scorePlusTextPrefab != null)
+            {
+                showScoreText();
+            }
             Destroy(gameObject);
         }
+    }
+
+    private void showScoreText()
+    {
+        Instantiate(scorePlusTextPrefab, transform.position, Quaternion.identity);
     }
 
 

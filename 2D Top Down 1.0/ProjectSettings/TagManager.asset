@@ -9,6 +9,8 @@ TagManager:
   - Water
   - Enemy
   - ShakeManager
+  - score
+  - Red
   layers:
   - Default
   - TransparentFX

@@ -6,6 +6,8 @@ public class BulletBehavior : MonoBehaviour
 {
     [SerializeField] float speed;
     [SerializeField] float life;
+    [SerializeField] Transform player;
+    [SerializeField] GameObject bulletDitroyEffectPrefab;
 
     
     //[SerializeField] ParticleSystem destroyParticle;
@@ -26,6 +28,20 @@ public class BulletBehavior : MonoBehaviour
     {
         
         rb.velocity = transform.up * speed;
+
+    }
+
+    private void Update()
+    {
+        if(player != null)
+        {
+            float gap = Mathf.Abs((transform.position.x - player.position.x));
+            if(gap > 45.0f)
+            {
+                Instantiate(bulletDitroyEffectPrefab, transform.position, Quaternion.identity);
+                Destroy(gameObject);
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

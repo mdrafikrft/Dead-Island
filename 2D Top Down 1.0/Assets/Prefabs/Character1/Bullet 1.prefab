@@ -102,7 +102,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 100
   life: 5
-  shakeCamera: {fileID: 5282350206025562565, guid: c331c1e7f03af7349bdc73535369a1d8, type: 3}
+  player: {fileID: 1269258664836108584, guid: a6d1f53257f5ecc4d960f0fdd389b664, type: 3}
+  bulletDitroyEffectPrefab: {fileID: 2171179620256758328, guid: 5b77ccd07579f14498cb6eefe4845e00, type: 3}
 --- !u!50 &4030316623046341273
 Rigidbody2D:
   serializedVersion: 4
